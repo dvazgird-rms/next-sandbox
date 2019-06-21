@@ -1,0 +1,17 @@
+{
+  "name": "next-sandbox",
+  "version": "0.0.1",
+  "description": "Just trying to see what NextJS is capable of.",
+  "author": "Damir Vazgird <dvazgird@rms.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
