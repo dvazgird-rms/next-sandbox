@@ -23,7 +23,7 @@ function Home() {
       {/**
         This style will be scoped to this page.
       */}
-      <p>scoped styles, but the background is global.</p>
+      <p>scoped styles, but the body background is global.</p>
       <style jsx>{`
         p {
           color: blue;
@@ -47,9 +47,33 @@ function Home() {
           background: black;
         }
       `}</style>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
+      {/**
+        Routes created from files in ./pages
+        dynamic routes can also be made with express
+        would then use a page template to render a dynamic page
+      */}
+      <ul>
+        <li>
+          <Link href="/about" as="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <Link href='/b' as='/a'>
+            <a>a</a>
+          </Link>
+        </li>
+        <li>
+          <Link href='/a' as='/b'>
+            <a>b</a>
+          </Link>
+        </li>
+        <li>
+          <Link href={{ pathname: '/posts', query: { id: '2' } }} as='/posts/2'>
+            <a>post #2</a>
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 }
